@@ -1,0 +1,117 @@
+<table style="width: 100%;" cellpadding="3" cellspacing="0" border="0">
+    <tr>
+        <td>
+            <table cellpadding="5" cellspacing="0" border="0"
+                   style="width: 100%; border: 1px solid [BORDER COLOR]; border-collapse: collapse; font-family: 'Segoe UI', Helvetica, Verdana, Arial, sans-serif;">
+                <!--Header-->
+                <tr>
+                    <td style="font-size: 19px; font-weight: bold; color: [H1 COLOR]; background-color: [BORDER COLOR];">
+                        Workflow Step Assignment
+                    </td>
+                </tr>
+                <!--Content-->
+                <tr>
+                    <td style="font-size: 17px;">
+                        {{Approvers}} are assigned to the &quot;<span style="font-weight: bold;">{{Title}}</span>&quot;
+                        {{StepType}} workflow step.
+                    </td>
+                </tr>
+                {{#IsReminderNotification}}
+                {{#WorkflowCommentText}}
+                <tr>
+                    <td style="font-size: 17px; padding-top: 10px;">
+                        {{WorkflowCommentUserFullName}} sent this reminder on {{WorkflowCommentDate}}:<br/><br/>
+                        {{{WorkflowCommentText}}}
+                    </td>
+                </tr>
+                {{/
+            WorkflowCommentText}}
+                {{/
+            IsReminderNotification}}
+            </table>
+        </td>
+    </tr>
+    <!-- Spacing Row -->
+    <tr>
+        <td style="padding: 0px;">&nbsp;
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table cellpadding="5" cellspacing="0" border="0"
+                   style="width: 100%; border: 1px solid [BORDER COLOR]; border-collapse: collapse; font-family: 'Segoe UI', Helvetica, Verdana, Arial, sans-serif;">
+                <tr>
+                    <td style="font-size: 17px;">
+                        To act on this {{StepType}} step, click the link below:<br/>
+                        <span style="font-weight: bold;"><a href="{{{ApprovalURL}}}">{{Title}} Workflow Step</a></span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <!-- Spacing Row -->
+    <tr>
+        <td style="padding: 0px;">&nbsp;
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table cellpadding="5" cellspacing="0" border="0"
+                   style="width: 100%; border: 1px solid [BORDER COLOR]; border-collapse: collapse; font-family: 'Segoe UI', Helvetica, Verdana, Arial, sans-serif;">
+                <!--Header-->
+                <tr>
+                    <td style="font-size: 19px; font-weight: bold; color: [H1 COLOR]; background-color: [BORDER COLOR];">
+                        {{ClassificationName}} Details
+                    </td>
+                </tr>
+                <!--Classification/ID/Title-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        {{ClassificationName}} {{ID}}
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">
+                        {{TicketTitle}}
+                    </td>
+                </tr>
+                {{#Description}}
+                <!--Description-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Description
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{{Description}}}
+                    </td>
+                </tr>
+                {{/
+            Description}}
+                <!--Acct/Dept-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Acct/Dept
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{AccountName}}
+                    </td>
+                </tr>
+                {{#RequestorFullName}}
+                <!--Requestor-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Requested By
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{RequestorFullName}}
+                    </td>
+                </tr>
+                {{/
+            RequestorFullName}}
+            </table>
+        </td>
+    </tr>
+</table>

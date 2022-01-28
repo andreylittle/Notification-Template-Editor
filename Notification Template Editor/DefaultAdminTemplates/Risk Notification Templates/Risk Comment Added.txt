@@ -1,0 +1,238 @@
+<!--Container Table-->
+<table style="width: 100%;" cellpadding="3" cellspacing="0" border="0">
+    <!--Comments/Notes Section-->
+    <tr>
+        <td>
+            <table cellpadding="5" cellspacing="0" border="0"
+                   style="width: 100%; border: 1px solid [BORDER COLOR]; border-collapse: collapse; font-family: 'Segoe UI', Helvetica, Verdana, Arial, sans-serif;">
+                <!--Header-->
+                <tr>
+                    <td style="font-size: 19px; font-weight: bold; color: [H1 COLOR]; background-color: [BORDER COLOR];">Details
+                    </td>
+                </tr>
+                <!--Content-->
+                <tr>
+                    <td style="font-size: 16px;">{{UpdateCreatedUserFullName}} added a comment to this risk on {{UpdateCreatedDate}}.<br/>
+                        <br/>
+                        {{{UpdateText}}}
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <!-- Spacing Row -->
+    <tr>
+        <td style="padding: 0px;">&nbsp;
+        </td>
+    </tr>
+    <!--Summary Section-->
+    <tr>
+        <td>
+            <table cellpadding="5" cellspacing="0" border="0"
+                   style="width: 100%; border: 1px solid [BORDER COLOR]; border-collapse: collapse; font-family: 'Segoe UI', Helvetica, Verdana, Arial, sans-serif;">
+                <!--Header-->
+                <tr>
+                    <td style="font-size: 19px; font-weight: bold; color: [H1 COLOR]; background-color: [BORDER COLOR];">Risk
+                        Comment Added
+                    </td>
+                </tr>
+                <!--Project-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px;">{{ProjectOrWorkspaceLabel}}
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{ProjectName}}
+                    </td>
+                </tr>
+                <!--ID-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Risk ID
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{ID}}
+                    </td>
+                </tr>
+                <!--Title-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Title
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{Title}}
+                    </td>
+                </tr>
+                <!--Classification-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Classification
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{Classification}}
+                    </td>
+                </tr>
+                <!--Category-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Category
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{CategoryName}}
+                    </td>
+                </tr>
+                <!--Status-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Status
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{StatusName}}
+                    </td>
+                </tr>
+                <!--Response Strategy-->
+                {{#ResponseStrategyName}}
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Response Strategy
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">
+                        {{ResponseStrategyName}}
+                    </td>
+                </tr>
+                {{/
+            ResponseStrategyName}}
+                <!--Probability-->
+                {{#ProbabilityName}}
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Probability
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">
+                        {{ProbabilityName}}
+                    </td>
+                </tr>
+                {{/
+            ProbabilityName}}
+                <!--Impact-->
+                {{#ImpactName}}
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Impact
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">
+                        {{ImpactName}}
+                    </td>
+                </tr>
+                {{/
+            ImpactName}}
+                <!--Urgency-->
+                {{#UrgencyName}}
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Urgency
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">
+                        {{UrgencyName}}
+                    </td>
+                </tr>
+                {{/
+            UrgencyName}}
+                <!--Created By-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Created By
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{CreatedUserFullName}}
+                    </td>
+                </tr>
+                <!--Date Created-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Date Created
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{CreatedDate}}
+                    </td>
+                </tr>
+                <!--Date Modified-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Date Modified
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{ModifiedDate}}
+                    </td>
+                </tr>
+                <!--Responsibility-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Responsibility
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{ResponsibleUserFullName}}
+                    </td>
+                </tr>
+                <!--Description-->
+                {{#Description}}
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Description
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{{Description}}}
+                    </td>
+                </tr>
+                {{/
+            Description}}
+                {{#IncludeTeamDynamixLinks}}
+                <!--TDNext-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        TDNext
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">
+                        <a href="{{TDNextUrl}}">{{TDNextUrl}}</a>
+                    </td>
+                </tr>
+                {{#IsPublished}}
+                <!--TDClient-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        TDClient
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">
+                        <a href="{{TDClientUrl}}">{{TDClientUrl}}</a>
+                    </td>
+                </tr>
+                {{/
+            IsPublished}}
+                {{/
+            IncludeTeamDynamixLinks}}
+            </table>
+        </td>
+    </tr>
+</table>

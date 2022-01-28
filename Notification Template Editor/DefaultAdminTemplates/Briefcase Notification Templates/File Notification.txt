@@ -1,0 +1,150 @@
+<!--Container Table-->
+<table style="width: 100%;" cellpadding="3" cellspacing="0" border="0">
+    <!--Comments/Notes Section-->
+    <tr>
+        <td>
+            <table cellpadding="5" cellspacing="0" border="0"
+                   style="width: 100%; border: 1px solid [BORDER COLOR]; border-collapse: collapse; font-family: 'Segoe UI', Helvetica, Verdana, Arial, sans-serif;">
+                <!--Header-->
+                <tr>
+                    <td style="font-size: 19px; font-weight: bold; color: [H1 COLOR]; background-color: [BORDER COLOR];">Details
+                    </td>
+                </tr>
+                <!--Content-->
+                <tr>
+                    <td style="font-size: 16px;">{{{UpdateText}}}
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <!-- Spacing Row -->
+    <tr>
+        <td style="padding: 0px;">&nbsp;
+        </td>
+    </tr>
+    <!--Summary Section-->
+    <tr>
+        <td>
+            <table cellpadding="5" cellspacing="0" border="0"
+                   style="width: 100%; border: 1px solid [BORDER COLOR]; border-collapse: collapse; font-family: 'Segoe UI', Helvetica, Verdana, Arial, sans-serif;">
+                <!--Header-->
+                <tr>
+                    <td style="font-size: 19px; font-weight: bold; color: [H1 COLOR]; background-color: [BORDER COLOR];">File
+                        Notification
+                    </td>
+                </tr>
+                <!--Project Name-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px;">{{ProjectOrWorkspaceLabel}}
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{ProjectName}}
+                    </td>
+                </tr>
+                <!--File-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        File
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{Title}}
+                    </td>
+                </tr>
+                <!--Folder-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Folder
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{FolderName}}
+                    </td>
+                </tr>
+                <!--Description-->
+                {{#Description}}
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Description
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{{Description}}}
+                    </td>
+                </tr>
+                {{/
+            Description}}
+                <!--Created By-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Created By
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{CreatedUserFullName}}
+                    </td>
+                </tr>
+                <!--Date Created-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Date Created
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{CreatedDate}}
+                    </td>
+                </tr>
+                <!--Revision-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Revision
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{Revision}}
+                    </td>
+                </tr>
+                <!--Last Revised By-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Last Revised By
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{LastRevisionUserFullName}}
+                    </td>
+                </tr>
+                {{#IncludeTeamDynamixLinks}}
+                <!--TDNext-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        TDNext
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">
+                        <a href="{{TDNextUrl}}">{{TDNextUrl}}</a>
+                    </td>
+                </tr>
+                {{#IsPublished}}
+                <!--TDClient-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        TDClient
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">
+                        <a href="{{TDClientUrl}}">{{TDClientUrl}}</a>
+                    </td>
+                </tr>
+                {{/
+            IsPublished}}
+                {{/
+            IncludeTeamDynamixLinks}}
+            </table>
+        </td>
+    </tr>
+</table>

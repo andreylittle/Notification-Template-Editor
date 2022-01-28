@@ -1,0 +1,120 @@
+<!--Container Table-->
+<table style="width: 100%;" cellpadding="3" cellspacing="0" border="0">
+    <!--Comments/Notes Section-->
+    <tr>
+        <td>
+            <table cellpadding="5" cellspacing="0" border="0"
+                   style="width: 100%; border: 1px solid [BORDER COLOR]; border-collapse: collapse; font-family: 'Segoe UI', Helvetica, Verdana, Arial, sans-serif;">
+                <!--Header-->
+                <tr>
+                    <td style="font-size: 19px; font-weight: bold; color: [H1 COLOR]; background-color: [BORDER COLOR];">Expense
+                        {{ActionName}}
+                    </td>
+                </tr>
+                <!--Content-->
+                <tr>
+                    <td style="font-size: 16px;">{{UpdateCreatedUserFullName}} added a comment to this expense on {{UpdateCreatedDate}}.<br/>
+                        <br/>
+                        {{{UpdateText}}}
+                        <br/>
+                        <br/>
+                        To respond to this comment or view details click the link below. <br/>
+                        <a href="{{TDNextUrl}}">{{TDNextUrl}}</a>
+                    </td>
+                </tr>
+                <!--Description-->
+                {{#Description}}
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Description
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{{Description}}}
+                    </td>
+                </tr>
+                {{/
+            Description}}
+                <!--Account-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Title
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{Title}}
+                    </td>
+                </tr>
+                <!--Status-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Status Name
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{StatusName}}
+                    </td>
+                </tr>
+                <!--Merchant-->
+                {{#MerchantName}}
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Merchant
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{MerchantName}}
+                    </td>
+                </tr>
+                {{/
+            MerchantName}}
+                <!--Amount-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Amount
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{Amount}}
+                    </td>
+                </tr>
+                <!--Receipt Date-->
+                {{#ReceiptDate}}
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Receipt Date
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{ReceiptDate}}
+                    </td>
+                </tr>
+                {{/
+            ReceiptDate}}
+                <!--Receipt Date-->
+                {{#ReportDate}}
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Report Date
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{ReportDate}}
+                    </td>
+                </tr>
+                {{/
+            ReportDate}}
+                <!--Project-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        {{ItemType}}
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{ProjectOrTicketName}}
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>

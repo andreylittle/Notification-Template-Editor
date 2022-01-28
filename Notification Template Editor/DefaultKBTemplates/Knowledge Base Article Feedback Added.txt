@@ -1,0 +1,161 @@
+<!--Container Table-->
+<table style="width: 100%;" cellpadding="3" cellspacing="0" border="0">
+    <!--Comments/Notes Section-->
+    <tr>
+        <td>
+            <table cellpadding="5" cellspacing="0" border="0"
+                   style="width: 100%; border: 1px solid [BORDER COLOR]; border-collapse: collapse; font-family: 'Segoe UI', Helvetica, Verdana, Arial, sans-serif;">
+                <!--Header-->
+                <tr>
+                    <td style="font-size: 19px; font-weight: bold; color: [H1 COLOR]; background-color: [BORDER COLOR];">Details
+                    </td>
+                </tr>
+                <!--Content-->
+                <tr>
+                    <td style="font-size: 16px;">
+                        {{UpdateCreatedUserFullName}} found this article <b>{{FeedbackType}}</b> on {{UpdateCreatedDate}}.
+                        <br/>
+                        <br/>
+                        {{{UpdateText}}}
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <!-- Spacing Row -->
+    <tr>
+        <td style="padding: 0px;">&nbsp;
+        </td>
+    </tr>
+    <!--Summary Section-->
+    <tr>
+        <td>
+            <table cellpadding="5" cellspacing="0" border="0"
+                   style="width: 100%; border: 1px solid [BORDER COLOR]; border-collapse: collapse; font-family: 'Segoe UI', Helvetica, Verdana, Arial, sans-serif;">
+                <!--Header-->
+                <tr>
+                    <td style="font-size: 19px; font-weight: bold; color: [H1 COLOR]; background-color: [BORDER COLOR];">Article
+                        Feedback Added
+                    </td>
+                </tr>
+                <!--Subject-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Subject
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">{{TitleShort}}
+                    </td>
+                </tr>
+                <!--ID-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Article ID
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">
+                        {{ID}}
+                    </td>
+                </tr>
+                <!-- Category -->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Category
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">
+                        {{Category}}
+                    </td>
+                </tr>
+
+                {{#HasDescription}}
+                <!-- Summary -->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Summary
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">
+                        {{{DescriptionShort}}}
+                    </td>
+                </tr>
+                {{/
+            HasDescription}}
+
+                <!-- Status -->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Status
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">
+                        {{Status}}
+                    </td>
+                </tr>
+                <!-- Is Published -->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Is Published
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">
+                        {{IsPublished}}
+                    </td>
+                </tr>
+                <!-- Owner Full Name -->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Owner
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">
+                        {{OwnerFullName}}
+                    </td>
+                </tr>
+                <!-- Date Created -->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Date Created
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">
+                        {{CreatedDate}}
+                    </td>
+                </tr>
+                <!-- Date Modified -->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        Date Modified
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">
+                        {{ModifiedDate}}
+                    </td>
+                </tr>
+                {{#IncludeTeamDynamixLinks}}
+                <!--TDClient-->
+                <tr>
+                    <td style="font-size: 17px; font-weight: bold; color: [H2 COLOR]; padding-top: 10px; border-top: 1px solid [BORDER COLOR];">
+                        TDClient
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 16px; padding-top: 0px;">
+                        <a href="{{TDClientUrl}}">{{TDClientUrl}}</a>
+                    </td>
+                </tr>
+                {{/
+            IncludeTeamDynamixLinks}}
+            </table>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,76 @@
+﻿<Window x:Name="HomeScreen_window" x:Class="Notification_Template_Editor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Notification_Template_Editor"
+        mc:Ignorable="d"
+        Title="MainWindow" MinHeight="640" Height="640" MinWidth="940" Width="940"
+        WindowStyle="SingleBorderWindow"
+        ResizeMode="CanResizeWithGrip"
+        Background="Transparent"
+        AllowsTransparency="False"
+        MouseDown="Window_MouseDown"
+        >
+
+
+    <Border Background="#f5f5f5"
+            CornerRadius="0">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition MinWidth="320" Width="320*"/>
+                <ColumnDefinition MinWidth="600" Width="600*"/>
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition MinHeight="85" Height="85*"/>
+                <RowDefinition MinHeight="85" Height="85*"/>
+                <RowDefinition MinHeight="85" Height="85*"/>
+                <RowDefinition MinHeight="85" Height="85*"/>
+                <RowDefinition MinHeight="85" Height="85*"/>
+                <RowDefinition MinHeight="85" Height="85*"/>
+                <RowDefinition MinHeight="85" Height="85*"/>
+
+
+
+
+            </Grid.RowDefinitions>
+            <Button x:Name="Modify_Default_Temp_btn" Width="280" Height="50" Grid.Column="0" Grid.Row="1" Foreground="#382b59" FontWeight="Bold" FontFamily="Sans-serif" FontSize="18" Content="Modify Defult Template" Margin="9,1,9,1" Click="Modify_Default_Temp_btn_Click" Background="#FFB3B3B3" >
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="0"/>
+                    </Style>
+                </Button.Resources>
+
+            </Button>
+            <Image HorizontalAlignment="Center" Height="34" VerticalAlignment="Center" Width="260" Source="/Images/Teamdynamix Header Image.png" RenderTransformOrigin="0.432,1.788"/>
+            <Image Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="90" Grid.Row="6" VerticalAlignment="Center" Width="560" Source="/Images/TeamDynamix Values.png" Margin="40,0,0,0"/>
+            <Label Grid.Column="1" Grid.ColumnSpan="3"  VerticalAlignment="Stretch" HorizontalContentAlignment="Center" Content="Notification Template Editor" Background="{x:Null}" VerticalContentAlignment="Center" FontSize="40" Focusable="True" FontStyle="Oblique" FontWeight="UltraBold" >
+                <Label.Foreground>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="1,0" SpreadMethod="Repeat" MappingMode="RelativeToBoundingBox">
+                        <GradientStop Color="#FF382B59" Offset="1"/>
+                        <GradientStop Color="#FF30609B" Offset="0"/>
+                    </LinearGradientBrush>
+                </Label.Foreground>
+            </Label>
+            <Image x:Name="BackgroundImage" Grid.Column="1" HorizontalAlignment="Center" Height="323" Margin="0,43,0,0" Grid.RowSpan="5" Grid.Row="1" VerticalAlignment="Top" Width="580" Source="/Images/Background Image.png"/>
+            <Button x:Name="Modify_Custom_Ticket_Template" Width="280" Height="50" Grid.Column="0" Grid.Row="2" Foreground="#382b59" FontWeight="Bold" FontFamily="Sans-serif" FontSize="18" Content="Modify Custom Ticket Template" Margin="23,20,24,19" Background="#FFB3B3B3" Click="Modify_Custom_Ticket_Template_Click" >
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="0"/>
+                    </Style>
+                </Button.Resources>
+
+            </Button>
+
+
+
+
+
+        </Grid>
+
+
+    </Border>
+
+</Window>
+

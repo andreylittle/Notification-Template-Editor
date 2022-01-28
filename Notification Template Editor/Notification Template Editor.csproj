@@ -1,0 +1,363 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>Notification_Template_Editor</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Images\Icon.ico</ApplicationIcon>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Background Image.png" />
+    <None Remove="Default Template With Text.PNG" />
+    <None Remove="Default Template.PNG" />
+    <None Remove="DefaultTicketTemplates\Ticket Comment Added %28Requestor%29 Template.txt" />
+    <None Remove="Default_Template.svg" />
+    <None Remove="Images\Icon.png" />
+    <None Remove="Teamdynamix Header Image.png" />
+    <None Remove="TeamDynamix Values.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="DefaultTicketTemplates\Ticket Comment Added (Requestor) Template.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Background Image.png" />
+    <Resource Include="Images\Default Template With Text.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Default Template.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Teamdynamix Header Image.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\TeamDynamix Values.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Custom Template Images\" />
+    <Folder Include="DefaultKBTemplates\" />
+    <Folder Include="Output\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DefaultAdminTemplates\Announcement Notification Templates\Announcement Created.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Briefcase Notification Templates\All Briefcase Templates.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Briefcase Notification Templates\File Check In Requested.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Briefcase Notification Templates\File Check In.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Briefcase Notification Templates\File Comment Added.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Briefcase Notification Templates\File Notification.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Briefcase Notification Templates\File Workflow Completed.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Briefcase Notification Templates\File Workflow Rejected.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Briefcase Notification Templates\File Workflow Routed For Approval.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Expense Notification Templates\All Expense Templates.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Expense Notification Templates\Expense Comment Added.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Expense Notification Templates\Expense Status Changed.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Issue Notification Templates\All Issue Templates.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Issue Notification Templates\Issue Comment Added.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Issue Notification Templates\Issue Created.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Issue Notification Templates\Issue Edited.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Issue Notification Templates\Issue Updated.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Link Notification Templates\All Link Templates.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Link Notification Templates\Link Comment Added.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Link Notification Templates\Link Created.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Portfolio Issue Notification Templates\All Portfolio Issue Templates.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Portfolio Issue Notification Templates\Issue Comment Added.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Portfolio Issue Notification Templates\Issue Created.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Portfolio Issue Notification Templates\Issue Edited.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Portfolio Issue Notification Templates\Issue Updated.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Portfolio Risk Notification Templates\All Portfolio Risk Templates.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Portfolio Risk Notification Templates\Risk Comment Added.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Portfolio Risk Notification Templates\Risk Created.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Portfolio Risk Notification Templates\Risk Edited.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Portfolio Risk Notification Templates\Risk Updated.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Project Notification Templates\All Project Templates.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Project Notification Templates\Project Comment Added.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Project Notification Templates\Project Manager Changed.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Project Notification Templates\Project Staffed.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Project Notification Templates\Project Updated.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Project Notification Templates\Resource Added to Project.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Project Notification Templates\Resource Removed from Project.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Project Request Notification Templates\All Project Request Templates.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Project Request Notification Templates\Request Approved.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Project Request Notification Templates\Request Comment Added.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Project Request Notification Templates\Request Declined.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Project Request Notification Templates\Request Forwarded.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Project Request Notification Templates\Request Forwarding Completed.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Project Request Notification Templates\Request Returned to Requestor.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Project Request Notification Templates\Request Step Responsibility.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Project Request Notification Templates\Request Submission.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Project Request Notification Templates\Request Type Changed.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Project Request Notification Templates\Request Withdrawn.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Project Request Notification Templates\Resource Added to Request.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Resource Request Notification Templates\All Resource Request Templates.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Resource Request Notification Templates\Multiple Resources Assigned to Project.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Resource Request Notification Templates\Resource Assigned to Project Request.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Resource Request Notification Templates\Resource Assigned to Project.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Resource Request Notification Templates\Resource Request Cancelled.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Resource Request Notification Templates\Resource Request Created.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Resource Request Notification Templates\Resource Request Edited.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Risk Notification Templates\All Risk Templates.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Risk Notification Templates\Risk Comment Added.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Risk Notification Templates\Risk Created.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Risk Notification Templates\Risk Edited.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Risk Notification Templates\Risk Updated.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Task Notification Templates\All Task Templates.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Task Notification Templates\Task Comment Added.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultAdminTemplates\Task Notification Templates\Task Updated.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultKBTemplates\All KB Tempaltes.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultKBTemplates\Knowledge Base Article Comment Added.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultKBTemplates\Knowledge Base Article Draft Rejected.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultKBTemplates\Knowledge Base Article Feedback Added.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultKBTemplates\Knowledge Base Article Status Changed.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultTicketTemplates\All Templates File.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultTicketTemplates\Ticket Comment Added (Ticketing User) Template.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultTicketTemplates\Ticket Created (Requestor) Template.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultTicketTemplates\Ticket Created (Ticketing User) Template.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultTicketTemplates\Ticket Moved (Ticketing User) Template.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultTicketTemplates\Ticket Service Level Agreement Violation (Requestor) Template.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultTicketTemplates\Ticket Service Level Agreement Violation (Ticketing User) Template.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultTicketTemplates\Ticket Service Level Agreement Warning (Requestor) Template.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultTicketTemplates\Ticket Service Level Agreement Warning (Ticketing User) Template.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultTicketTemplates\Ticket Task Comment Added (Requestor).txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultTicketTemplates\Ticket Task Comment Added (Ticketing User) Template.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultTicketTemplates\Ticket Task Updated (Requestor) Template.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultTicketTemplates\Ticket Task Updated (Ticketing User) Template.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultTicketTemplates\Ticket Updated (Requestor) Template.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultTicketTemplates\Ticket Updated (Ticketing User) Template.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DefaultTicketTemplates\Ticket Workflow Step Assignment.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Output\All Templates File.txt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Output\Ticket Comment Added %28Requestor%29 Template.txt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Output\Ticket Comment Added %28Ticketing User%29 Template.txt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Output\Ticket Created %28Requestor%29 Template.txt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Output\Ticket Created %28Ticketing User%29 Template.txt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Output\Ticket Moved %28Ticketing User%29 Template.txt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Output\Ticket Service Level Agreement Violation %28Requestor%29 Template.txt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Output\Ticket Service Level Agreement Violation %28Ticketing User%29 Template.txt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Output\Ticket Service Level Agreement Warning %28Requestor%29 Template.txt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Output\Ticket Service Level Agreement Warning %28Ticketing User%29 Template.txt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Output\Ticket Task Comment Added %28Requestor%29.txt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Output\Ticket Task Comment Added %28Ticketing User%29 Template.txt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Output\Ticket Task Updated %28Requestor%29 Template.txt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Output\Ticket Task Updated %28Ticketing User%29 Template.txt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Output\Ticket Updated %28Requestor%29 Template.txt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Output\Ticket Updated %28Ticketing User%29 Template.txt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Output\Ticket Workflow Step Assignment.txt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
