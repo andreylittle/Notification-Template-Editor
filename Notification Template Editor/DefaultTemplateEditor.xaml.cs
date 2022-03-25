@@ -23,16 +23,28 @@ namespace Notification_Template_Editor
     /// </summary>
     public partial class DefaultTemplateEditor : Window
     {
-        public DefaultTemplateEditor()
+       
+
+    public DefaultTemplateEditor()
         {
             InitializeComponent();
-            
         }
         public string get_Header1_color()
         {
             string var = header1_txt.Text;
             var = Hex_Error_handling(var);
             return var;
+        }
+        public string setImageUrlHeader()
+        {
+            string HeaderText = @"<tr><td style='width:100%;background-color:[BORDER COLOR];'><img style='float:left;' src='[HeaderURL]'width='170' height='80'/><br/><br/></td></tr><tr style='height:18px;'><td style='padding:0px; height: 18px; border-style: hidden;'>&nbsp;</td></tr>";
+
+
+            string var = ImageUrlTxt.Text;
+
+            HeaderText = HeaderText.Replace("[HeaderURL]", var);
+
+            return HeaderText;
         }
         public string get_Header2_color()
         {
@@ -72,6 +84,28 @@ namespace Notification_Template_Editor
 
             }
 
+
+        }
+        private void AddHeaderImage_CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            if (AddHeaderImage_CheckBox.IsChecked == true)
+                {
+                ImageUrlTxt.Visibility = Visibility.Visible;
+                ImageURL_lbl.Visibility = Visibility.Visible;
+
+                }
+           
+
+        }
+        private void AddHeaderImage_CheckBox_UNChecked(object sender, RoutedEventArgs e)
+        {
+           
+            if (AddHeaderImage_CheckBox.IsChecked == false)
+            {
+                ImageUrlTxt.Visibility = Visibility.Collapsed;
+                ImageURL_lbl.Visibility = Visibility.Collapsed;
+                
+            }
 
         }
         private void Generate_Templates_Click(object sender, RoutedEventArgs e)
@@ -123,7 +157,6 @@ namespace Notification_Template_Editor
             }
             MessageBox.Show("Please Check output folder for templates");
 
-
         }
         private void TicketTemplateFileHandler(String FileName)
         {
@@ -132,10 +165,16 @@ namespace Notification_Template_Editor
             Trace.WriteLine(file_name);
 
             string text = System.IO.File.ReadAllText(FileName);
+            string headerimagecode = "";
+
+            if (AddHeaderImage_CheckBox.IsChecked == true)
+            {
+                headerimagecode = setImageUrlHeader();
+            }
             
-            ///string header1 = header1_txt.Text;
-            ///string header2 = header2_txt.Text;
-            ///string boarder_color = TableOutline_txt.Text;
+
+
+            text = text.Replace("[AddHeaderImage]", headerimagecode);
             text = text.Replace("[H1 COLOR]", get_Header1_color());
             text = text.Replace("[H2 COLOR]", get_Header2_color());
             text = text.Replace("[BORDER COLOR]", get_Table_color());
@@ -248,9 +287,7 @@ namespace Notification_Template_Editor
 
 
         }
+
         
-
-
-
     }
 }
